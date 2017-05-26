@@ -1,8 +1,10 @@
+#don't commit any of the out files at this time
+
 .vagrant*
 *~
 work/*
+.DS_Store*
 
-#don't commit any of the out files at this time
 *out.*
 *.gz*
 *.sql*
