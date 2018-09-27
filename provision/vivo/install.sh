@@ -36,6 +36,7 @@ cd $APPDIR
 
 #Checkout three tiered build template from Github
 git clone https://github.com/lawlesst/vivo-project-template.git .
+sudo git checkout 3f703081c36d6ac060cbccf98900eeea1dd6fbe2
 git submodule init
 git submodule update
 cd VIVO/
