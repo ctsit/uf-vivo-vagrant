@@ -30,13 +30,13 @@ load_ufVivo_ontology:
 	# move a copy of the ufVivo ontology into the vagrant using the filegraph method
 	# https://wiki.duraspace.org/display/VIVO/Deploying+additional+ontologies+with+VIVO
 	#
-	-vagrant ssh -c 'sudo service tomcat7 stop'
+	-vagrant ssh -c 'sudo service tomcat8 stop'
 	-vagrant ssh -c 'sudo cp provision/uf_vivo_ontology/* /usr/local/vdata/rdf/tbox/filegraph/'
-	-vagrant ssh -c 'sudo service tomcat7 start'
+	-vagrant ssh -c 'sudo service tomcat8 start'
 
 load_api_auth_file:
 	#copy the auth file and move it to the right location
-	-vagrant ssh -c 'sudo service tomcat7 stop'
+	-vagrant ssh -c 'sudo service tomcat8 stop'
 	-vagrant ssh -c 'sudo cp provision/authorizeSparqlQuery.n3 /usr/local/vdata/rdf/auth/everytime/'
-	-vagrant ssh -c 'sudo chown tomcat7:tomcat7 /usr/local/vdata/rdf/auth/everytime/authorizeSparqlQuery.n3'
-	-vagrant ssh -c 'sudo service tomcat7 start'
+	-vagrant ssh -c 'sudo chown tomcat8:tomcat8 /usr/local/vdata/rdf/auth/everytime/authorizeSparqlQuery.n3'
+	-vagrant ssh -c 'sudo service tomcat8 start'
