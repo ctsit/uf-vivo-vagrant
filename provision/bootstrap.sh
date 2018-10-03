@@ -45,10 +45,10 @@ installTomcat () {
 }
 
 # MySQL
-# echo mysql-server mysql-server/root_password password vivo | debconf-set-selections
-# echo mysql-server mysql-server/root_password_again password vivo | debconf-set-selections
-# apt-get install -y mysql-server
-# apt-get install -y mysql-client
+echo mysql-server mysql-server/root_password password vivo | debconf-set-selections
+echo mysql-server mysql-server/root_password_again password vivo | debconf-set-selections
+apt-get install -y mysql-server
+apt-get install -y mysql-client
 
 
 

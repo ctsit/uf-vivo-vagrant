@@ -27,6 +27,10 @@ mkdir -p $DATADIR/config
 #Make log directory
 mkdir -p $DATADIR/logs
 
+VIVO_DATABASE=vivo17dev
+
+mysql -uroot -pvivo -e "CREATE DATABASE IF NOT EXISTS $VIVO_DATABASE DEFAULT CHARACTER SET utf8;"
+
 removeRDFFiles(){
     #In development, you might want to remove these ontology and data files
     #since they slow down Tomcat restarts considerably.
